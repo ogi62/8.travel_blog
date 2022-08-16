@@ -9,6 +9,14 @@ import { HeaderComponent } from './shared/shell/header/header.component';
 import { LoginComponent } from './shared/shell/login/login.component';
 import { SignUpComponent } from './shared/shell/sign-up/sign-up.component';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { provideAuth } from '@angular/fire/auth';
+import { getAuth } from 'firebase/auth';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment.prod';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +28,11 @@ import { SignUpComponent } from './shared/shell/sign-up/sign-up.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth()),
+    AngularFirestoreModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
