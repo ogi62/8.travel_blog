@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './shared/shell/login/login.component';
+import { SignUpComponent } from './shared/shell/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,24 @@ const routes: Routes = [
         (m) => m.TopCitiesModule
       ),
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: SignUpComponent
+  },
+  {
+    path: '',
+    redirectTo: 'all_blogs',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'all_blogs',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
