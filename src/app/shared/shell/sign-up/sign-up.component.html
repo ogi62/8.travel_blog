@@ -1,6 +1,12 @@
 <div class="form-container">
     <h3 class="form-containerTitle">Register</h3>
-    <form class="form" [formGroup]="signUp" (submit)="onSubmit()">
+    <div class="alert alert-danger" *ngIf="error">
+        <p>{{ error }}</p>
+      </div>
+      <div *ngIf="isLoading" style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+    <form class="form" [formGroup]="signUp" (ngSubmit)="onSubmit(signUp)" *ngIf="!isLoading">
         <div class="formGroup">
             <label class="formGroupLabel" for="name">Firs Name :</label>
             <input class="formGroupInput" type="text" name="name" id="name" placeholder="Enter Your First Name..." formControlName="firstName" />
@@ -20,7 +26,7 @@
                 placeholder="Enter Your Password..."  formControlName="password"/>
         </div>
         <div class="buttonGroup">
-            <button type="submit" class="buttonGroupBtn">Register</button>
+            <button type="submit" class="buttonGroupBtn" [disabled]="!signUp.valid">Register</button>
             <p class="buttonGroupText">Have account click here -> <a class="buttonGroupLink" routerLink="/login">Login</a></p>
         </div>
     </form>

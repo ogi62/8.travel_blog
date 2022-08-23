@@ -15,6 +15,8 @@ import { provideAuth } from '@angular/fire/auth';
 import { getAuth } from 'firebase/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment.prod';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { environment } from 'src/environments/environment.prod';
     FooterComponent,
     HeaderComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { environment } from 'src/environments/environment.prod';
     provideAuth(() => getAuth()),
     AngularFirestoreModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
