@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "category": "Europe",
+      "title": "Belgrade",
+      "author": "ogi",
+      "body": "Belgrade is the capital of Serbia.It's known for it's night life, good restaurants and lorem ipusuym sadosglas afsghla afhgah afh5iy8jb f ghlgdh fg soijhwoh wh",
+      "image": "./assets/images/Belgrade.jpg"
+    },
+    {
+      "id": 2,
+      "category": "Europe",
+      "title": "Barcelona",
+      "author": "ogi",
+      "body": "Barcelona is saf;ghla aflha lafhlalh laflhgal iybnlnsd dldj af hadlhjdlh aslalh a lahdaljhdlh  ooejhto ddgjhgoiuhj  fldalhjlgjh  qogeo   hlgs lhg   oewh owrojhwjo wr",
+      "image": "./assets/images/barcelona.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Europe",
+      "title": "Madrid",
+      "author": "ogi",
+      "body": "Madrid lfgja gd hgdah  hogsho hghos hosgh ss night life, good restaurants and lorem ipusuym sadosglas afsghla afhgah afh5iy8jb f ghlgdh fg soijhwoh wh",
+      "image": "./assets/images/madrid.jpg"
+    },
+    {
+      "id": 4,
+      "category": "Europe",
+      "title": "London",
+      "author": "ogi",
+      "body": "London is the capital of England.It's known for it's night life, good restaurants and lorem ipusuym sadosglas afsghla afhgah afh5iy8jb f ghlgdh fg soijhwoh wh",
+      "image": "./assets/images/london.jpg"
+    },
+    {
+      "id": 1,
+      "category": "Europe",
+      "title": "Moscow",
+      "author": "ogi",
+      "body": "Moscow is the capital of Russia.It's known for it's night life, good restaurants and lorem ipusuym sadosglas afsghla afhgah afh5iy8jb f ghlgdh fg soijhwoh wh",
+      "image": "./assets/images/moscow.jpg"
+    },
+    {
+      "id": 1,
+      "category": "Europe",
+      "title": "Rome",
+      "author": "ogi",
+      "body": "Rome is the capital of Italy.It's known for it's night life, good restaurants and lorem ipusuym sadosglas afsghla afhgah afh5iy8jb f ghlgdh fg soijhwoh wh",
+      "image": "./assets/images/rome.jpg"
+    }
+  ],
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }]
+}
