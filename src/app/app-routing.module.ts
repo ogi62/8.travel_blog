@@ -24,6 +24,18 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'traveling',
+    loadChildren: () =>
+      import('./feature/traveling/traveling.module').then(
+        (m) => m.TravelingModule
+      ),
+  },
+  {
+    path: 'food_posts',
+    loadChildren: () =>
+      import('./feature/food/food.module').then((m) => m.FoodModule),
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
