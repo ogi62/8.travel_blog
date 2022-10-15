@@ -5,7 +5,7 @@ import { SignUpComponent } from './shared/shell/sign-up/sign-up.component';
 
 const routes: Routes = [
   {
-    path: 'all_blogs',
+    path: 'home',
     loadChildren: () =>
       import('./feature/all-blogs/all-blogs.module').then(
         (m) => m.AllBlogsModule
