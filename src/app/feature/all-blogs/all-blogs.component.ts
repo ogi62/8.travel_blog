@@ -26,7 +26,7 @@ export class AllBlogsComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy() {
-    this.touristPosts.next([]);
+    this.touristPosts.unsubscribe();
   }
 
 }
