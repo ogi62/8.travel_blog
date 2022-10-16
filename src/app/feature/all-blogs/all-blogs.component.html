@@ -28,6 +28,9 @@
                     </div>
             </div>
             <div>
+              <div *ngIf="isLoading" style="text-align: center;">
+                <app-loading-spinner></app-loading-spinner>
+              </div>
                 <div class="border post-container mt-5" *ngFor="let post of touristPosts$ | async">
                     <h1>{{post.postTitle}}</h1>
                     <p>{{post.category}}</p>

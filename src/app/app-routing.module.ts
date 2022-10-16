@@ -45,12 +45,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'all_blogs',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'all_blogs',
+    redirectTo: 'home',
     pathMatch: 'full'
   }
 ];
