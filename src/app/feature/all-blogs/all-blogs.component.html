@@ -1,1 +1,18 @@
-<p>all-blogs works!</p>
+<div class="container" *ngFor="let post of touristPosts$ | async">
+<h1>{{post.postTitle}}</h1>
+<p>{{post.category}}</p>
+<p>
+    <span>{{post.userName}}</span>
+    <span>{{post.date}}</span>
+</p>
+<img 
+src={{post.postImg}} 
+alt="">
+<div *ngIf="!post.postImg">
+    <img src="assets/images/no-img.jpg" alt="no">
+</div>
+<div class="section-one">
+    {{post.postSection1}}
+</div>
+
+</div>
