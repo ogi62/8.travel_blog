@@ -3,6 +3,10 @@
     align-content: center;
     grid-template-rows: 1fr;
     grid-template-columns: 20rem auto;
+
+    .pointer {
+        cursor: pointer;
+    }
     
     .post-container {
         display: flex;
