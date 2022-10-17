@@ -1,0 +1,64 @@
+<div class="grid-container">
+    <div class=" mt-5">
+        <span class="btn btn-primary">FILTERS</span>
+        <div class="list-group">
+            <a 
+            class="list-group-item categories list-group-item-action pointer"
+            >
+              All Categories
+            </a>
+              <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > Europe</a>
+            <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > Asia</a>
+            <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > North America</a>
+            <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > Central America</a>
+            <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > South America</a>
+            <a 
+              class="list-group-item categories list-group-item-action pointer"
+            > Africa</a>
+            </div>
+    </div>
+    <div>
+      <div *ngIf="isLoading" style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+        <div class="border post-container mt-5" *ngFor="let post of touristPosts$ | async">
+            <h1>{{post.postTitle}}</h1>
+            <p>{{post.category}}</p>
+            <p>
+                <span>{{post.userName}}</span>
+                <span>{{post.date}}</span>
+            </p>
+            <div class="image-container">
+                <img 
+                class="img-fluid post-image"
+                src={{post.postImg}} 
+                alt="">
+            </div>
+            <div *ngIf="!post.postImg">
+                <img class="img-fluid" src="assets/images/no-img.jpg" alt="no">
+            </div>
+            <div class="section-one m-5">
+                {{post.postSection1}}
+            </div>
+            <div>
+                <button class="btn btn-warning mx-5" (click)="goToSinglePost(post)">Read More</button>
+                <div class="btn-group">
+                    <button class="btn btn-success">Add to favourite</button>
+                    <button class="btn btn-danger">Remove from favourite</button>
+                </div>
+            </div>
+            </div>
+    </div>
+    
+
+</div>

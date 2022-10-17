@@ -1,4 +1,5 @@
 export interface TouristPost {
+    id: number
     postTitle: string;
     category: string;
     date: number;
