@@ -13,7 +13,10 @@ import { LoadingSpinnerComponent } from 'src/app/shared/components/loading-spinn
   ],
   imports: [
     CommonModule,
-    AllBlogsRoutingModule
+    AllBlogsRoutingModule,
+  ],
+  exports: [
+    LoadingSpinnerComponent
   ]
 })
 export class AllBlogsModule { }

@@ -24,6 +24,13 @@ export class TouristBlogsService {
     );
   }
 
+  getPost(id: number): Observable<TouristPost> {
+    const url = `${this.apiurl}/${id}`;
+    return this.http.get<TouristPost>(url).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: any) {
     console.log(error);
     return throwError(error);
