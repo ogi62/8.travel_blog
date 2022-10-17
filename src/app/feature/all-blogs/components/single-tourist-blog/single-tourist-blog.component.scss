@@ -1,0 +1,40 @@
+.single-blog-title {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.single-blog-link {
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.2rem;
+    color: red;
+    text-decoration: none;
+    border: 1px solid red;
+    padding: 0.25rem;
+    border-radius: 0.4rem;
+}
+
+.single-blog-author {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.single-blog-date {
+    color: lightgray;
+    font-style: italic;
+    font-size: 1.1rem;
+    cursor: pointer;
+    &:hover {
+        color: black;
+    }
+}
+
+.single-blog-image {
+    width: 80%;
+    min-height: 40rem;
+    margin: 0 auto;
+}

@@ -1,25 +1,65 @@
-<div class="container" *ngIf="loading">
+<div 
+class="container" 
+*ngIf="loading"
+>
     <app-loading-spinner></app-loading-spinner>
 </div>
-<div class="container" *ngIf="singleBlog">
-    <h1>{{ singleBlog.postTitle }}</h1>
-    <a routerLink="/all_blogs">Go Back</a>
-    <p>{{singleBlog.userName}}</p>
-    <p>{{singleBlog.date}}</p>
-    <img 
+<div 
+class="container" 
+*ngIf="singleBlog">
+    <h1 class="single-blog-title">
+        {{ singleBlog.postTitle }}
+    </h1>
+    <a 
+    class="single-blog-link"
+    routerLink="/all_blogs"
+    >
+    Go Back
+    </a>
+    <p 
+    class="single-blog-author"
+    >
+        {{singleBlog.userName}}
+    </p>
+    <p
+    class="single-blog-date"
+    >
+        {{singleBlog.date}}
+    </p>
+    <img
+    class="single-blog-image" 
     src={{singleBlog.postImg}} 
     alt={{singleBlog.postTitle}}
     >
-    <p>{{singleBlog.postSection1}}</p>
+    <div 
+    *ngIf="!singleBlog.postImg"
+    >
+        <img 
+        class="img-fluid" 
+        src="assets/images/no-img.jpg" 
+        alt="no"
+        >
+    </div>
+    <p>
+        {{singleBlog.postSection1}}
+    </p>
     <img 
+    *ngIf="singleBlog.postImg2"
+    class="single-blog-image" 
     src={{singleBlog.postImg2}} 
     alt={{singleBlog.postTitle}}
     >
-    <p>{{singleBlog.postSection2}}</p>
+    <p>
+        {{singleBlog.postSection2}}
+    </p>
     <img 
+    *ngIf="singleBlog.postImg3"
+    class="single-blog-image" 
     src={{singleBlog.postImg3}} 
     alt={{singleBlog.postTitle}}
     >
-    <p>{{singleBlog.postSection3}}</p>
+    <p>
+        {{singleBlog.postSection3}}
+    </p>
 
 </div>
