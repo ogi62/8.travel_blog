@@ -36,6 +36,10 @@ const routes: Routes = [
       import('./feature/food/food.module').then((m) => m.FoodModule),
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./feature/admin/admin.module').then((m)=> m.AdminModule),
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
