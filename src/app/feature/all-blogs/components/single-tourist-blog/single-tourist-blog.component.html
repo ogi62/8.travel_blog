@@ -1,9 +1,25 @@
-<div class="container">
-    <h1>Blog Title</h1>
+<div class="container" *ngIf="loading">
+    <app-loading-spinner></app-loading-spinner>
+</div>
+<div class="container" *ngIf="singleBlog">
+    <h1>{{ singleBlog.postTitle }}</h1>
     <a routerLink="/all_blogs">Go Back</a>
-    <p>user</p>
-    <p>date</p>
-    <p>asfdghaah ahh dah hahaghaha haghjiohjtewo owtoiwhio getwohoiwh o thowohio faad oet dslbnlhw ooghgsl s</p>
-    <p>afglja qeroet gsohoh fsjajj  rqguguhquog aha quqr giuqgibj jbjsdjbs ouirgog jdsjb sjb gagahgjha ghja</p>
-    <p>fgahkljagh gfajgafjg hafhafhg a afshahg af</p>
+    <p>{{singleBlog.userName}}</p>
+    <p>{{singleBlog.date}}</p>
+    <img 
+    src={{singleBlog.postImg}} 
+    alt={{singleBlog.postTitle}}
+    >
+    <p>{{singleBlog.postSection1}}</p>
+    <img 
+    src={{singleBlog.postImg2}} 
+    alt={{singleBlog.postTitle}}
+    >
+    <p>{{singleBlog.postSection2}}</p>
+    <img 
+    src={{singleBlog.postImg3}} 
+    alt={{singleBlog.postTitle}}
+    >
+    <p>{{singleBlog.postSection3}}</p>
+
 </div>

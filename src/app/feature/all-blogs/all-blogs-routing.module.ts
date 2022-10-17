@@ -21,6 +21,11 @@ const routes: Routes = [
         path: '',
         redirectTo: 'all_blogs',
         pathMatch: 'full'
+      },
+      {
+        path: '**',
+        redirectTo: 'all_blogs',
+        pathMatch: 'full'
       }
     ],
   },
